@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	 http://www.springframework.org/schema/beans/spring-beans-2.5.xsd"
+       default-autowire="byName">
+
+    <bean id="task" class="org.itstack.demo.DemoTask"/>
+
+    <bean id="taskHandler" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="task"/>
+        <property name="targetMethod" value="execute"/>
+        <property name="concurrent" value="true"/>
+    </bean>
+
+    <bean id="taskTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="taskHandler"/>
+        <property name="cronExpression" value="0/5 * * * * ?"/>
+    </bean>
+
+    <bean id="taskScheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean" autowire="no">
+        <property name="triggers">
+            <list>
+                <ref local="taskTrigger"/>
+            </list>
+        </property>
+        <property name="autoStartup" value="true"/>
+    </bean>
+
+</beans>
