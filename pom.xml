@@ -13,6 +13,7 @@
         <module>itstack-demo-code-mybatis</module>
         <module>itstack-demo-code-schedule</module>
         <module>itstack-demo-code-proxy</module>
+        <module>itstack-demo-code-idea</module>
     </modules>
 
     <properties>
