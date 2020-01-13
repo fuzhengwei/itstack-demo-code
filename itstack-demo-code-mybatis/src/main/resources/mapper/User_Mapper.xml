@@ -3,9 +3,15 @@
 <mapper namespace="org.itstack.demo.dao.IUserDao">
 
     <select id="queryUserInfoById" parameterType="java.lang.Long" resultType="org.itstack.demo.po.User">
-         SELECT id, name, age, createTime, updateTime
-         FROM user
-         where id = #{id}
+        SELECT id, name, age, createTime, updateTime
+        FROM user
+        where id = #{id}
+    </select>
+
+    <select id="queryUserList" parameterType="org.itstack.demo.po.User" resultType="org.itstack.demo.po.User">
+        SELECT id, name, age, createTime, updateTime
+        FROM user
+        where age = #{age}
     </select>
 
 </mapper>
