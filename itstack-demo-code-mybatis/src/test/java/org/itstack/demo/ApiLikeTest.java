@@ -1,10 +1,10 @@
 package org.itstack.demo;
 
 import com.alibaba.fastjson.JSON;
-import org.itstack.demo.like.Resources;
-import org.itstack.demo.like.SqlSession;
-import org.itstack.demo.like.SqlSessionFactory;
-import org.itstack.demo.like.SqlSessionFactoryBuilder;
+import org.itstack.demo.like.mybatis.Resources;
+import org.itstack.demo.like.mybatis.SqlSession;
+import org.itstack.demo.like.mybatis.SqlSessionFactory;
+import org.itstack.demo.like.mybatis.SqlSessionFactoryBuilder;
 import org.itstack.demo.po.User;
 import org.junit.Test;
 

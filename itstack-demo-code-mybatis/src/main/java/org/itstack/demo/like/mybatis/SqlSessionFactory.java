@@ -1,4 +1,4 @@
-package org.itstack.demo.like;
+package org.itstack.demo.like.mybatis;
 
 /**
  * 公众号 | bugstack虫洞栈

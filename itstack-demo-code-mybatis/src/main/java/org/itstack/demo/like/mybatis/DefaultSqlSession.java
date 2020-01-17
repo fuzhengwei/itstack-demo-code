@@ -1,4 +1,4 @@
-package org.itstack.demo.like;
+package org.itstack.demo.like.mybatis;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;

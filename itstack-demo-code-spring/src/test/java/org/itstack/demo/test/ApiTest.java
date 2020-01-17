@@ -1,5 +1,6 @@
 package org.itstack.demo.test;
 
+import org.itstack.demo.IUserDao;
 import org.itstack.demo.UserService;
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -63,6 +64,14 @@ public class ApiTest {
             logger.info("测试结果 beanName：{} beanClass：{} scope：{}", id, clazz, scope);
         }
 
+    }
+
+    @Test
+    public void test_IUserDao() {
+        BeanFactory beanFactory = new ClassPathXmlApplicationContext("spring-config.xml");
+        IUserDao userDao = beanFactory.getBean("userDao", IUserDao.class);
+        String res = userDao.queryUserInfo();
+        logger.info("测试结果：{}", res);
     }
 
 }

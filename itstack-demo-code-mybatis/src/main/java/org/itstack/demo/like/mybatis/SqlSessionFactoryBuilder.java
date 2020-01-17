@@ -1,4 +1,4 @@
-package org.itstack.demo.like;
+package org.itstack.demo.like.mybatis;
 
 import org.dom4j.Document;
 import org.dom4j.DocumentException;

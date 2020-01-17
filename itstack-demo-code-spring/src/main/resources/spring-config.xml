@@ -6,4 +6,8 @@
 
     <bean id="userService" class="org.itstack.demo.UserService" scope="singleton"/>
 
+    <!--<bean id="userDao1" class="org.itstack.demo.bean.ProxyBeanFactory"/>-->
+
+    <bean id="userDao2" class="org.itstack.demo.bean.RegisterBeanFactory"/>
+
 </beans>
