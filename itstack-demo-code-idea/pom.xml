@@ -26,7 +26,7 @@
         <asm-all.version>3.3.1</asm-all.version>
         <commons-io.version>2.2</commons-io.version>
         <slf4j-api.version>1.7.7</slf4j-api.version>
-        <logback-classic.version>1.0.9</logback-classic.version>
+        <logback-classic.version>1.2.0</logback-classic.version>
         <fastjson.version>1.2.62</fastjson.version>
     </properties>
 
